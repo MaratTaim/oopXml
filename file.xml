@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<p:candyBox xmlns:p="http://www.example.com/candy-box"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.example.com/candy-box file.xsd ">
+
+    <present>
+
+        <candy type="chocolate">
+            <countOfSugar>52</countOfSugar>
+            <weight>25.0</weight>
+            <size>big</size>
+        </candy>
+        <candy type="biscuit">
+            <countOfSugar>22</countOfSugar>
+            <weight>92.0</weight>
+            <size>small</size>
+        </candy>
+        <fruit type="apple">
+            <countOfSugar>5</countOfSugar>
+            <weight>20.6</weight>
+            <season>Winter</season>
+        </fruit>
+    </present>
+
+</p:candyBox>

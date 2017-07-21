@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/candy-box"
+        xmlns:box="http://www.example.com/candy-box">
+
+    <element name="candyBox" type="box:Present"/>
+
+    <complexType name="Present">
+        <sequence>
+            <element name="present" type="box:candyGroup"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="candyGroup">
+        <choice minOccurs="0" maxOccurs="unbounded">
+            <group ref="box:candyType"/>
+        </choice>
+    </complexType>
+
+    <group name="candyType">
+        <choice>
+            <element name="candy" type="box:Candy"/>
+            <element name="fruit" type="box:Fruit"/>
+        </choice>
+    </group>
+
+<!--********************* OOP ************************-->
+
+    <complexType name="SweetProduct">  <!--интерфейс-->
+        <sequence>
+            <element name="countOfSugar" type="int"/>
+            <element name="weight" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Candy">  <!--абстрактный класс-->
+        <complexContent>
+            <extension base="box:SweetProduct">
+                <sequence>
+                    <element name="size" type="string"/>
+                </sequence>
+                <attribute name="type" use="required">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="biscuit"/>
+                            <enumeration value="caramel"/>
+                            <enumeration value="chocolate"/>
+                            <enumeration value="snac"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Fruit">  <!--абстрактный класс-->
+        <complexContent>
+            <extension base="box:SweetProduct">
+                <sequence>
+                    <element name="season">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="Summer"/>
+                                <enumeration value="Autumn"/>
+                                <enumeration value="Winter"/>
+                                <enumeration value="Spring"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+                <attribute name="type" use="required">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="apple"/>
+                            <enumeration value="orange"/>
+                        </restriction>
+                    </simpleType>
+                </attribute>
+            </extension>
+        </complexContent>
+    </complexType>
+
+</schema>
