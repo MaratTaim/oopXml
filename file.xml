@@ -3,13 +3,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.example.com/candy-box file.xsd ">
 
-    <present>
-		<candy type="chocolate">
-            <countOfSugar>222</countOfSugar>
-            <weight>2.2</weight>
-            <size>big</size>
-        </candy>
-	
+    <present>	
 	
         <candy type="chocolate">
             <countOfSugar>52</countOfSugar>
