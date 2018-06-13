@@ -4,7 +4,13 @@
             xsi:schemaLocation="http://www.example.com/candy-box file.xsd ">
 
     <present>
-
+		<candy type="chocolate">
+            <countOfSugar>222</countOfSugar>
+            <weight>25.0</weight>
+            <size>big</size>
+        </candy>
+	
+	
         <candy type="chocolate">
             <countOfSugar>52</countOfSugar>
             <weight>25.0</weight>
