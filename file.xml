@@ -5,8 +5,6 @@
 
     <present>	
 	
-		<!-- comment -->
-	
         <candy type="chocolate">
             <countOfSugar>52</countOfSugar>
             <weight>25.0</weight>
